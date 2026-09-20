@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Rohit_Resume from "../assets/Rohit_Resume.pdf"
 
 export default function Navbar() {
   const [activeTab, setActiveTab] = useState('Home');
@@ -45,7 +46,7 @@ export default function Navbar() {
         {/* Right: Resume Button */}
         <div className="hidden md:flex items-center">
           <a
-            href="/resume.pdf"
+            href={Rohit_Resume}
             download
             className="no-underline2 inline-flex items-center gap-2 px-6 py-2 rounded-full border border-cyan-400 text-cyan-400 text-sm font-medium hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]"
           >

@@ -22,7 +22,7 @@ import {
   FiLayers as Layers,
   FiCpu as Cpu
 } from 'react-icons/fi';
-
+import Rental from "./assets/Rental.png"
 import { IoLogoHtml5 } from "react-icons/io5";
 import { FaCss3Alt } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
@@ -145,32 +145,14 @@ export default function App() {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'Furniture and Appliances Rental system',
       category: 'MERN Stack',
       tags: ['React', 'Node.js', 'MongoDB'],
-      description: 'Full-featured online shopping platform with user auth, cart management, payment integration, and admin dashboard.',
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=600&q=80',
-      demoUrl: '#',
-      githubUrl: '#'
+      description: 'Full-featured online Furniture and Appliances rental platform with user auth, inventory management, payment integration, and admin dashboard.',
+      image: Rental,
+      demoUrl: 'https://rental-project-opal.vercel.app/',
+      githubUrl: 'https://github.com/geniusHit/RentalProject.git'
     },
-    {
-      title: 'Task Management App',
-      category: 'MERN Stack',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      description: 'Kanban-style task tracking app featuring drag-and-drop cards, team collaboration tools, and progress analytics.',
-      image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80',
-      demoUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      title: 'Chat Application',
-      category: 'MERN Stack',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      description: 'Real-time messaging platform with Socket.io, direct messaging, channels, file sharing, and online status.',
-      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80',
-      demoUrl: '#',
-      githubUrl: '#'
-    }
   ];
 
   return (
@@ -417,7 +399,7 @@ export default function App() {
                     {/* Thumbnail */}
                     <div className="relative h-32 overflow-hidden bg-slate-900">
                       <img 
-                        src={project.image} 
+                        src={project?.image}
                         alt={project.title} 
                         className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500 opacity-80 hover:opacity-100"
                       />
@@ -449,9 +431,8 @@ export default function App() {
 
                     <div className="flex items-center space-x-2 pt-2 border-t border-navy-light/60">
                       <a 
-                        href={project.demoUrl} 
+                        href={project.demoUrl}
                         className="no-underline2 text-xs font-semibold text-slate-300 hover:text-cyan-accent flex items-center space-x-1"
-                        onClick={(e) => { e.preventDefault(); alert(`Opening live demo for ${project.title}`); }}
                       >
                         <span>Open</span>
                         <ExternalLink className="w-3 h-3" />
