@@ -435,7 +435,7 @@ export default function App() {
                         className="no-underline2 text-xs font-semibold text-slate-300 hover:text-cyan-accent flex items-center space-x-1"
                       >
                         <span>Open</span>
-                        <ExternalLink className="w-3 h-3" />
+                        <ExternalLink className="w-3 h-3" /> 
                       </a>
                     </div>
                   </div>
