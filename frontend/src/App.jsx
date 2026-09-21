@@ -27,9 +27,9 @@ import { IoLogoHtml5 } from "react-icons/io5";
 import { FaCss3Alt } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
 
-import { 
-  FaLinkedin as Linkedin, 
-  FaTwitter as Twitter 
+import {
+  FaLinkedin as Linkedin,
+  FaTwitter as Twitter
 } from 'react-icons/fa6';
 
 const customStyles = `
@@ -160,12 +160,19 @@ export default function App() {
       <style>{customStyles}</style>
 
       <Navbar />
-      
-      <section id="home" className="pt-8 pb-16 md:py-24 px-4 sm:px-8 max-w-7xl mx-auto main">
-        <div className="items-center home-box">
-          
+
+      <section id="home" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto main">
+        <div className="home-box">
+
+          {/* Right Hero Image / Avatar Frame */}
+          <img
+            src={RohitPhoto}
+            alt="Rohit Developer"
+            className="object-cover object-top rounded-t-2xl rohit-photo"
+          />
+
           {/* Left Text Column */}
-          <div className=" space-y-6 text-left">
+          <div className="">
             <div>
               <span className="text-cyan-accent font-semibold tracking-wide text-lg sm:text-xl block mb-2">
                 Hi, I'm
@@ -179,7 +186,7 @@ export default function App() {
               </h2>
             </div>
 
-            <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
               I build modern, scalable and user-friendly web applications using MongoDB, Express.js, React and Node.js. With 16 months of hands-on experience in React and Node.js, I turn ideas into real products.
             </p>
 
@@ -214,44 +221,12 @@ export default function App() {
             </div>
           </div>
 
-          {/* Right Hero Image / Avatar Frame */}
-          <div className=" flex justify-center lg:justify-end relative">
-            <div className="relative w-full max-w-md">
-              {/* Background Accent Blob Shape */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-600/30 to-blue-600/20 rounded-3xl blur-2xl transform -rotate-6"></div>
-
-              {/* Main Photo Card Container */}
-              <div className="d-flex align-items-center">
-                <div className="bg-gradient-to-b from-teal-900/60 to-slate-950 rounded-2xl overflow-hidden pt-6 px-4 flex justify-center items-end min-h-[360px] sm:min-h-[420px]">
-                  {/* Photo Avatar Representation */}
-                  <img
-                    src={RohitPhoto}
-                    alt="Rohit Developer"
-                    className="w-full h-80 sm:h-96 object-cover object-top rounded-t-2xl transform hover:scale-105 transition-transform duration-500 rohit-photo"
-                  />
-                </div>
-              </div>
-
-              {/* Tilted Handcrafted Badge Overlay */}
-              {/* <div className="absolute -bottom-4 -right-2 sm:right-2 bg-transparent pointer-events-none">
-                <div className="transform rotate-12 text-cyan-accent text-right">
-                  <div className="font-handwriting text-3xl sm:text-4xl font-bold tracking-wider leading-none drop-shadow-md">
-                    Code<br />Build<br />Solve
-                  </div>
-                  <svg className="w-20 h-6 text-cyan-accent ml-auto" viewBox="0 0 100 20" fill="none">
-                    <path d="M5 10 Q 50 18, 95 5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" fill="none" />
-                  </svg>
-                </div>
-              </div> */}
-            </div>
-          </div>
-
         </div>
       </section>
 
-      <section id="about" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
+      <section id="about" className="py-16 flex px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
         <div className="grid grid-cols-2 lg:grid-cols-12 gap-10 items-start">
-          
+
           {/* Left: About Me Info */}
           <div id="skills" className="lg:col-span-6 space-y-6">
             <div>
@@ -302,7 +277,7 @@ export default function App() {
           </div>
 
           {/* Right: Tech Stack Grid */}
-          <div className="lg:col-span-6 bg-card-navy border border-navy-light rounded-2xl p-6 sm:p-8">
+          <div className="lg:col-span-6 bg-card-navy border border-navy-light rounded-2xl p-6 sm:p-8 w-full">
             <h3 className="text-xl font-bold text-white mb-6 flex justify-between">
               <span>My Tech Stack</span>
               <span className="text-xs text-slate-400 font-normal flex items-center">Core Technologies</span>
@@ -327,7 +302,7 @@ export default function App() {
 
       <section id="experience" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          
+
           {/* Work Experience Column */}
           <div className="lg:col-span-5 space-y-6">
             <div>
@@ -379,7 +354,7 @@ export default function App() {
 
               <a
                 href="https://github.com/geniusHit"
-                target="_blank" 
+                target="_blank"
                 rel="noreferrer"
                 className="no-underline2 text-xs text-slate-400 hover:text-cyan-accent flex items-center space-x-1 font-medium transition-colors"
               >
@@ -391,16 +366,16 @@ export default function App() {
             {/* Projects Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {projects.map((project, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="bg-card-navy border border-navy-light rounded-xl overflow-hidden card-hover flex flex-col justify-between"
                 >
                   <div>
                     {/* Thumbnail */}
                     <div className="relative h-32 overflow-hidden bg-slate-900">
-                      <img 
+                      <img
                         src={project?.image}
-                        alt={project.title} 
+                        alt={project.title}
                         className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500 opacity-80 hover:opacity-100"
                       />
                       <div className="absolute top-2 right-2 bg-dark-navy/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] text-cyan-accent font-semibold border border-navy-light">
@@ -430,12 +405,12 @@ export default function App() {
                     </div>
 
                     <div className="flex items-center space-x-2 pt-2 border-t border-navy-light/60">
-                      <a 
+                      <a
                         href={project.demoUrl}
                         className="no-underline2 text-xs font-semibold text-slate-300 hover:text-cyan-accent flex items-center space-x-1"
                       >
                         <span>Open</span>
-                        <ExternalLink className="w-3 h-3" /> 
+                        <ExternalLink className="w-3 h-3" />
                       </a>
                     </div>
                   </div>
@@ -447,14 +422,14 @@ export default function App() {
         </div>
       </section>
 
-      {}
+      { }
       <section id="contact" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
         <div className="bg-card-navy border border-navy-light rounded-3xl p-6 sm:p-10 relative overflow-hidden">
           {/* Subtle Ambient Background Glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             {/* Contact Heading & Text */}
             <div className="lg:col-span-6 space-y-3">
               <span className="text-xs font-bold uppercase tracking-widest text-cyan-accent block">
@@ -470,10 +445,10 @@ export default function App() {
 
             {/* Contact Details & Social Links */}
             <div className="lg:col-span-6 flex flex-col sm:flex-row lg:flex-row items-start sm:items-center justify-between gap-6 pt-4 lg:pt-0 border-t lg:border-t-0 border-navy-light">
-              
+
               {/* Contact Info Items */}
               <div className="space-y-3 text-sm">
-                <div 
+                <div
                   onClick={handleCopyEmail}
                   className="flex items-center space-x-3 text-slate-300 hover:text-cyan-accent cursor-pointer transition-colors group"
                 >

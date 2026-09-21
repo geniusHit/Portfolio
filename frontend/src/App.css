@@ -5,31 +5,27 @@ body {
   overflow-x: hidden;
 }
 
-.main {
-  margin-top: 30px;
-}
+.main {}
 
-.strengths{
+.strengths {
   overflow-wrap: break-word;
 }
 
-.strengths h4{
+.strengths h4 {
   font-size: 16px !important;
 }
 
 .home-box {
-  display: grid;
-  grid-template-columns: 70% 25%;
-  justify-content: space-between;
+  display: flex;
+  gap: 30px;
 }
 
 .rohit-photo {
-  width: 100%;
+  width: 25%;
+  border-radius: 14px;
 }
 
-#about {
-  margin-top: 30px;
-}
+#about {}
 
 .projects-btn {
   border-radius: 20px;
@@ -64,8 +60,9 @@ body {
   color: #00f2fe;
 }
 
-.no-underline2{
+.no-underline2, a {
   text-decoration: none !important;
+  color: white !important;
 }
 
 .bg-cyan-accent {
@@ -162,3 +159,31 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #00f2fe;
 }
+
+@media screen and (max-width: 1000px) {
+
+  .rohit-photo-container {
+    align-items: start;
+    background: none;
+  }
+
+  .rohit-photo {
+    height: 224px;
+    width: 224px;
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  .home-box {
+    flex-direction: column;
+  }
+
+  #about > div{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+
+@media screen and (min-width: 1024x) {}

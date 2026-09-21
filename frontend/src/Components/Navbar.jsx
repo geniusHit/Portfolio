@@ -8,7 +8,7 @@ export default function Navbar() {
   const navItems = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'];
 
   return (
-    <nav className="bg-[#050b14] border-b border-cyan-950/40 px-6 lg:px-12 text-white pt-2 pb-8 px-4 sm:px-8 max-w-7xl mx-auto">
+    <nav className="bg-[#050b14] border-b border-cyan-950/40 px-6 lg:px-12 text-white lg:pt-2 lg:pb-8 px-4 sm:px-8 max-w-7xl mx-auto">
       <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
         
         {/* Left: Brand / Logo */}
@@ -27,7 +27,7 @@ export default function Navbar() {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 onClick={() => setActiveTab(item)}
-                className={`no-underline2 relative flex items-center h-full text-sm font-medium transition-colors duration-200 ${
+                className={`no-underline2 text-white relative flex items-center h-full text-sm font-medium transition-colors duration-200 ${
                   isActive 
                     ? 'text-cyan-400' 
                     : 'text-slate-300 hover:text-white'
@@ -48,7 +48,7 @@ export default function Navbar() {
           <a
             href={Rohit_Resume}
             download
-            className="no-underline2 inline-flex items-center gap-2 px-6 py-2 rounded-full border border-cyan-400 text-cyan-400 text-sm font-medium hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]"
+            className="no-underline2 text-white inline-flex items-center gap-2 px-6 py-2 rounded-full border border-cyan-400 text-cyan-400 text-sm font-medium hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]"
           >
             <span>Resume</span>
             {/* Download Icon */}
