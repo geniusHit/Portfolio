@@ -47,7 +47,7 @@ body {
 }
 
 .border-navy-light {
-  border-color: #1e2f4d;
+  border-color: #1e2f4d !important;
 }
 
 .text-cyan-accent {

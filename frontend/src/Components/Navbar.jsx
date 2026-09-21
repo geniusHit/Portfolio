@@ -8,7 +8,7 @@ export default function Navbar() {
   const navItems = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'];
 
   return (
-    <nav className="bg-[#050b14] border-b border-cyan-950/40 px-6 lg:px-12 text-white lg:pt-2 lg:pb-8 px-4 sm:px-8 max-w-7xl mx-auto">
+    <nav className="bg-[#080e18] border-b border-cyan-950/40 px-6 lg:px-12 text-white lg:pt-2 lg:pb-8 px-4 sm:px-8 max-w-7xl mx-auto">
       <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
         
         <a href="#home" className="flex items-center gap-3 group no-underline2">

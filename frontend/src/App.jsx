@@ -378,8 +378,6 @@ export default function App() {
 
       <section id="contact" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
         <div className="bg-card-navy border border-navy-light rounded-3xl p-6 sm:p-10 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
             <div className="lg:col-span-6 space-y-3">
