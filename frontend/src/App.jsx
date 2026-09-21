@@ -54,6 +54,10 @@ export default function App() {
     setTimeout(() => setCopiedEmail(false), 2000);
   };
 
+  useEffect(()=> {
+    window.scrollTo(0, 0);
+  }, [])
+
   const techStack = [
     {
       name: 'MongoDB',
@@ -207,7 +211,7 @@ export default function App() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-              <div className="bg-card-navy border border-navy-light rounded-xl p-4 flex flex-col hover:border-cyan-accent/50 transition-colors">
+              <div className="border !border-[#1a2a44] bg-card-navy rounded-xl p-4 flex flex-col hover:border-cyan-accent/50 transition-colors">
                 <div className="w-9 h-9 rounded-lg bg-cyan-accent/10 flex items-center justify-center text-cyan-accent mb-3">
                   <Zap className="w-5 h-5" />
                 </div>
@@ -217,7 +221,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="bg-card-navy border border-navy-light rounded-xl p-4 flex flex-col hover:border-cyan-accent/50 transition-colors">
+              <div className="border !border-[#1a2a44] bg-card-navy rounded-xl p-4 flex flex-col hover:border-cyan-accent/50 transition-colors">
                 <div className="w-9 h-9 rounded-lg bg-cyan-accent/10 flex items-center justify-center text-cyan-accent mb-3">
                   <Users className="w-5 h-5" />
                 </div>
@@ -227,7 +231,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="bg-card-navy border border-navy-light rounded-xl p-4 flex flex-col hover:border-cyan-accent/50 transition-colors">
+              <div className="border !border-[#1a2a44] bg-card-navy rounded-xl p-4 flex flex-col hover:border-cyan-accent/50 transition-colors">
                 <div className="w-9 h-9 rounded-lg bg-cyan-accent/10 flex items-center justify-center text-cyan-accent mb-3">
                   <Code2 className="w-5 h-5" />
                 </div>
@@ -239,7 +243,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 bg-card-navy border border-navy-light rounded-2xl p-6 sm:p-8 w-full">
+          <div className="border !border-[#1a2a44] lg:col-span-6 bg-card-navy rounded-2xl p-6 sm:p-8 w-full">
             <h3 className="text-xl font-bold text-white mb-6 flex justify-between">
               <span>My Tech Stack</span>
               <span className="text-xs text-slate-400 font-normal flex items-center">Core Technologies</span>
@@ -275,7 +279,7 @@ export default function App() {
               </h2>
             </div>
 
-            <div className="bg-card-navy border border-navy-light rounded-2xl p-6 relative">
+            <div className="bg-card-navy rounded-2xl p-6 relative border !border-[#1a2a44]">
               <div className="flex items-start space-x-4">
                 <div className="w-1.5 bg-cyan-accent rounded-full h-24 flex-shrink-0 mt-1"></div>
 
@@ -325,7 +329,7 @@ export default function App() {
               {projects.map((project, idx) => (
                 <div
                   key={idx}
-                  className="bg-card-navy border border-navy-light rounded-xl overflow-hidden card-hover flex flex-col justify-between"
+                  className="bg-card-navy rounded-xl overflow-hidden card-hover flex flex-col justify-between border !border-[#1a2a44]"
                 >
                   <div>
                     <div className="relative h-32 overflow-hidden bg-slate-900">
@@ -334,7 +338,7 @@ export default function App() {
                         alt={project.title}
                         className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500 opacity-80 hover:opacity-100"
                       />
-                      <div className="absolute top-2 right-2 bg-dark-navy/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] text-cyan-accent font-semibold border border-navy-light">
+                      <div className="absolute top-2 right-2 bg-dark-navy/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] text-cyan-accent font-semibold">
                         {project.category}
                       </div>
                     </div>
@@ -377,7 +381,7 @@ export default function App() {
       </section>
 
       <section id="contact" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
-        <div className="bg-card-navy border border-navy-light rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+        <div className="bg-card-navy rounded-3xl p-6 sm:p-10 relative overflow-hidden border !border-[#1a2a44]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
             <div className="lg:col-span-6 space-y-3">
@@ -417,7 +421,7 @@ export default function App() {
                   href="https://www.linkedin.com/in/rohit-thakur-370778240/"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-11 h-11 rounded-xl bg-card-inner border border-navy-light flex items-center justify-center text-slate-300 hover:text-cyan-accent hover:border-cyan-accent/60 transition-all duration-300"
+                  className="w-11 h-11 rounded-xl bg-card-inner flex items-center justify-center text-slate-300 hover:text-cyan-accent hover:border-cyan-accent/60 transition-all duration-300"
                   aria-label="LinkedIn Profile"
                 >
                   <Linkedin className="w-5 h-5" />
@@ -427,7 +431,7 @@ export default function App() {
                   href="https://github.com/geniusHit"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-11 h-11 rounded-xl bg-card-inner border border-navy-light flex items-center justify-center text-slate-300 hover:text-cyan-accent hover:border-cyan-accent/60 transition-all duration-300"
+                  className="w-11 h-11 rounded-xl bg-card-inner flex items-center justify-center text-slate-300 hover:text-cyan-accent hover:border-cyan-accent/60 transition-all duration-300"
                   aria-label="GitHub Profile"
                 >
                   <FaGitAlt className="w-5 h-5" />
