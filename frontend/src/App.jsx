@@ -96,9 +96,6 @@ export default function App() {
       name: 'HTML5',
       icon: (
         <IoLogoHtml5 className="w-8 h-8 bg-orange-600 text-white font-bold flex items-center justify-center rounded text-xs mb-2 mx-auto" />
-        // <div >
-        //   5
-        // </div>
       ),
       color: '#e34f26'
     },
@@ -136,7 +133,7 @@ export default function App() {
 
       <Navbar />
 
-      <section id="home" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto main">
+      <section id="home" className="py-8 lg:py-16 px-4 sm:px-8 max-w-7xl mx-auto main">
         <div className="home-box">
 
           <img
@@ -193,7 +190,7 @@ export default function App() {
         </div>
       </section>
 
-      <section id="about" className="py-16 flex px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
+      <section id="about" className="py-8 lg:py-16 flex px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
         <div className="grid grid-cols-2 lg:grid-cols-12 gap-10 items-start">
 
           <div id="skills" className="lg:col-span-6 space-y-6">
@@ -266,7 +263,7 @@ export default function App() {
         </div>
       </section>
 
-      <section id="experience" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
+      <section id="experience" className="py-8 lg:py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
           <div className="lg:col-span-5 space-y-6">
@@ -380,7 +377,7 @@ export default function App() {
         </div>
       </section>
 
-      <section id="contact" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
+      <section id="contact" className="py-8 lg:py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
         <div className="bg-card-navy rounded-3xl p-6 sm:p-10 relative overflow-hidden border !border-[#1a2a44]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
@@ -391,9 +388,9 @@ export default function App() {
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                 Get In Touch
               </h2>
-              <p className="text-slate-300 text-sm sm:text-base max-w-md">
+              <div className="text-slate-300 text-sm sm:text-base max-w-md">
                 I'm always open to discussing new opportunities, exciting projects, or just a friendly chat.
-              </p>
+              </div>
             </div>
 
             <div className="lg:col-span-6 flex flex-col sm:flex-row lg:flex-row items-start sm:items-center justify-between gap-6 pt-4 lg:pt-0 border-t lg:border-t-0 border-navy-light">

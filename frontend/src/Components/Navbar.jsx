@@ -13,7 +13,7 @@ export default function Navbar() {
         
         <a href="#home" className="flex items-center gap-3 group no-underline2">
           <span className="text-xl font-bold tracking-wide text-white no-underline">
-            Rohit
+            ROHIT
           </span>
         </a>
 
@@ -102,7 +102,7 @@ export default function Navbar() {
           ))}
           <div className="pt-2">
             <a
-              href="/resume.pdf"
+              href={Rohit_Resume}
               download
               className="flex items-center justify-center gap-2 w-full px-5 py-2.5 rounded-full border border-cyan-400 text-cyan-400 font-medium hover:bg-cyan-400 hover:text-black transition-colors"
             >
