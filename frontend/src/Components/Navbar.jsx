@@ -11,14 +11,12 @@ export default function Navbar() {
     <nav className="bg-[#050b14] border-b border-cyan-950/40 px-6 lg:px-12 text-white lg:pt-2 lg:pb-8 px-4 sm:px-8 max-w-7xl mx-auto">
       <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
         
-        {/* Left: Brand / Logo */}
         <a href="#home" className="flex items-center gap-3 group no-underline2">
           <span className="text-xl font-bold tracking-wide text-white no-underline">
             Rohit
           </span>
         </a>
 
-        {/* Center: Desktop Navigation Links */}
         <div className="hidden md:flex items-center space-x-8 h-full">
           {navItems.map((item) => {
             const isActive = activeTab === item;
@@ -34,7 +32,6 @@ export default function Navbar() {
                 }`}
               >
                 {item}
-                {/* Active Underline Indicator */}
                 {isActive && (
                   <span className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-cyan-400 rounded-full shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
                 )}
@@ -43,7 +40,6 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* Right: Resume Button */}
         <div className="hidden md:flex items-center">
           <a
             href={Rohit_Resume}
@@ -51,7 +47,6 @@ export default function Navbar() {
             className="no-underline2 text-white inline-flex items-center gap-2 px-6 py-2 rounded-full border border-cyan-400 text-cyan-400 text-sm font-medium hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]"
           >
             <span>Resume</span>
-            {/* Download Icon */}
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 20 20" 
@@ -68,7 +63,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Hamburger Button */}
         <div className="flex md:hidden items-center">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -87,7 +81,6 @@ export default function Navbar() {
 
       </div>
 
-      {/* Mobile Drawer / Dropdown */}
       {isMobileMenuOpen && (
         <div className="md:hidden py-4 border-t border-cyan-950/40 flex flex-col space-y-3">
           {navItems.map((item) => (

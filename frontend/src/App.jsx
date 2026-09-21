@@ -37,11 +37,8 @@ const customStyles = `
 `;
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState('home');
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
-  // Smooth scroll handler
   const scrollToSection = (id) => {
     setActiveSection(id);
     setMobileMenuOpen(false);
@@ -51,31 +48,8 @@ export default function App() {
     }
   };
 
-  // Detect active section on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
-      const scrollPosition = window.scrollY + 200;
-
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("rohit@example.com");
+    navigator.clipboard.writeText("rohitthakur792002@gmail.com");
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -128,9 +102,6 @@ export default function App() {
       name: 'CSS3',
       icon: (
         <FaCss3Alt className="w-8 h-8 bg-blue-600 text-white font-bold flex items-center justify-center rounded text-xs mb-2 mx-auto" />
-        // <div >
-        //   3
-        // </div>
       ),
       color: '#1572b6'
     },
@@ -164,14 +135,12 @@ export default function App() {
       <section id="home" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto main">
         <div className="home-box">
 
-          {/* Right Hero Image / Avatar Frame */}
           <img
             src={RohitPhoto}
             alt="Rohit Developer"
             className="object-cover object-top rounded-t-2xl rohit-photo"
           />
 
-          {/* Left Text Column */}
           <div className="">
             <div>
               <span className="text-cyan-accent font-semibold tracking-wide text-lg sm:text-xl block mb-2">
@@ -190,7 +159,6 @@ export default function App() {
               I build modern, scalable and user-friendly web applications using MongoDB, Express.js, React and Node.js. With 16 months of hands-on experience in React and Node.js, I turn ideas into real products.
             </p>
 
-            {/* Feature Stat Badges */}
             <div className="">
               <div className="">
                 {/* <Briefcase className="w-5 h-5 text-cyan-accent flex-shrink-0" /> */}
@@ -201,7 +169,6 @@ export default function App() {
               </div>
 
               <div className="">
-                {/* <MapPin className="w-5 h-5 text-cyan-accent flex-shrink-0" /> */}
                 <div>
                   <div className="text-white font-bold">India</div>
                   <div className="text-slate-400 text-xs">(Available for remote work)</div>
@@ -209,14 +176,12 @@ export default function App() {
               </div>
             </div>
 
-            {/* CTA Buttons */}
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <button
                 onClick={() => scrollToSection('projects')}
                 className="btn-cyan-glow inline-flex items-center space-x-2 px-6 py-3.5 bg-cyan-accent text-slate-950 font-bold rounded-full text-sm sm:text-base cursor-pointer projects-btn"
               >
                 <span>View My Projects</span>
-                {/* <ArrowRight className="w-4 h-4" /> */}
               </button>
             </div>
           </div>
@@ -227,7 +192,6 @@ export default function App() {
       <section id="about" className="py-16 flex px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
         <div className="grid grid-cols-2 lg:grid-cols-12 gap-10 items-start">
 
-          {/* Left: About Me Info */}
           <div id="skills" className="lg:col-span-6 space-y-6">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-cyan-accent block mb-1">
@@ -242,7 +206,6 @@ export default function App() {
               I'm <strong className="text-cyan-accent font-semibold">Rohit</strong>, a passionate MERN stack developer with 16 months of experience in React and Node.js. I enjoy building responsive web applications, solving real-world problems, and constantly learning new technologies to grow as a developer.
             </p>
 
-            {/* Trait Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
               <div className="bg-card-navy border border-navy-light rounded-xl p-4 flex flex-col hover:border-cyan-accent/50 transition-colors">
                 <div className="w-9 h-9 rounded-lg bg-cyan-accent/10 flex items-center justify-center text-cyan-accent mb-3">
@@ -276,7 +239,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Right: Tech Stack Grid */}
           <div className="lg:col-span-6 bg-card-navy border border-navy-light rounded-2xl p-6 sm:p-8 w-full">
             <h3 className="text-xl font-bold text-white mb-6 flex justify-between">
               <span>My Tech Stack</span>
@@ -303,7 +265,6 @@ export default function App() {
       <section id="experience" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
-          {/* Work Experience Column */}
           <div className="lg:col-span-5 space-y-6">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-cyan-accent block mb-1">
@@ -314,15 +275,13 @@ export default function App() {
               </h2>
             </div>
 
-            {/* Timeline Experience Card */}
             <div className="bg-card-navy border border-navy-light rounded-2xl p-6 relative">
               <div className="flex items-start space-x-4">
-                {/* Accent Vertical Bar */}
                 <div className="w-1.5 bg-cyan-accent rounded-full h-24 flex-shrink-0 mt-1"></div>
 
                 <div className="space-y-3">
                   <div>
-                    <span className="text-xs font-bold text-cyan-accent tracking-wide uppercase bg-cyan-accent/10 px-2.5 py-1 rounded-full inline-block mb-1">
+                    <span className="text-xs font-bold text-cyan-accent tracking-wide uppercase bg-cyan-accent/10 py-1 rounded-full inline-block mb-1">
                       16 Months
                     </span>
                     <h3 className="text-slate-300 font-medium text-xs">React & Node.js</h3>
@@ -340,7 +299,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Featured Projects Column */}
           <div id="projects" className="lg:col-span-7 space-y-6">
             <div className="flex items-center justify-between">
               <div>
@@ -363,7 +321,6 @@ export default function App() {
               </a>
             </div>
 
-            {/* Projects Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {projects.map((project, idx) => (
                 <div
@@ -371,7 +328,6 @@ export default function App() {
                   className="bg-card-navy border border-navy-light rounded-xl overflow-hidden card-hover flex flex-col justify-between"
                 >
                   <div>
-                    {/* Thumbnail */}
                     <div className="relative h-32 overflow-hidden bg-slate-900">
                       <img
                         src={project?.image}
@@ -383,7 +339,6 @@ export default function App() {
                       </div>
                     </div>
 
-                    {/* Content */}
                     <div className="p-4 space-y-2">
                       <h4 className="text-white font-bold text-sm tracking-tight hover:text-cyan-accent transition-colors cursor-pointer">
                         {project.title}
@@ -394,7 +349,6 @@ export default function App() {
                     </div>
                   </div>
 
-                  {/* Tags & Action Footer */}
                   <div className="p-4 pt-0">
                     <div className="flex flex-wrap gap-1.5 mb-3">
                       {project.tags.map((tag, tIdx) => (
@@ -422,15 +376,12 @@ export default function App() {
         </div>
       </section>
 
-      { }
       <section id="contact" className="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-navy-light/40">
         <div className="bg-card-navy border border-navy-light rounded-3xl p-6 sm:p-10 relative overflow-hidden">
-          {/* Subtle Ambient Background Glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
-            {/* Contact Heading & Text */}
             <div className="lg:col-span-6 space-y-3">
               <span className="text-xs font-bold uppercase tracking-widest text-cyan-accent block">
                 LET'S WORK TOGETHER
@@ -443,32 +394,26 @@ export default function App() {
               </p>
             </div>
 
-            {/* Contact Details & Social Links */}
             <div className="lg:col-span-6 flex flex-col sm:flex-row lg:flex-row items-start sm:items-center justify-between gap-6 pt-4 lg:pt-0 border-t lg:border-t-0 border-navy-light">
 
-              {/* Contact Info Items */}
               <div className="space-y-3 text-sm">
                 <div
                   onClick={handleCopyEmail}
                   className="flex items-center space-x-3 text-slate-300 hover:text-cyan-accent cursor-pointer transition-colors group"
                 >
-                  {/* <Mail className="w-4 h-4 text-cyan-accent group-hover:scale-110 transition-transform" /> */}
                   <span className="font-medium">rohitthakur792002@gmail.com</span>
                   {copiedEmail && <span className="text-[10px] bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded">Copied!</span>}
                 </div>
 
                 <div className="flex items-center space-x-3 text-slate-300">
-                  {/* <Phone className="w-4 h-4 text-cyan-accent" /> */}
                   <span className="font-medium">+91 88474 82208</span>
                 </div>
 
                 <div className="flex items-center space-x-3 text-slate-300">
-                  {/* <MapPin className="w-4 h-4 text-cyan-accent" /> */}
                   <span className="font-medium">Punjab, India</span>
                 </div>
               </div>
 
-              {/* Social Buttons */}
               <div className="flex items-center space-x-3">
                 <a
                   href="https://www.linkedin.com/in/rohit-thakur-370778240/"
